@@ -1,0 +1,40 @@
+{
+    "model" : {
+        "min_input_size":       288,
+        "max_input_size":       448,
+        "anchors":              [5,10, 8,50, 9,18, 16,31, 28,54, 35,192, 46,86, 75,138, 121,238],
+        "labels":               ["Car","Truck","Pedestrian","MotorCycle", "Bus"]
+    },
+
+    "train": {
+        "train_image_folder":   "/home/MultiObject_Annotation/Dataset/Images/",
+        "train_annot_folder":   "/home/MultiObject_Annotation/Dataset/Annotation/",
+        "cache_name":           "yolov3_1.pkl",
+
+        "train_times":          8,
+        "batch_size":           8,
+        "learning_rate":        1e-4,
+        "nb_epochs":            41,
+        "warmup_epochs":        5,
+        "ignore_thresh":        0.5,
+        "gpus":                 "0,1",
+
+        "grid_scales":          [1,1,1],
+        "obj_scale":            5,
+        "noobj_scale":          1,
+        "xywh_scale":           1,
+        "class_scale":          1,
+
+        "tensorboard_dir":      "logs",
+        "saved_weights_name":   "Detection/Yolov3/work_1.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "",
+        "valid_annot_folder":   "",
+        "cache_name":           "",
+
+        "valid_times":          1
+    }
+}
