@@ -1,0 +1,7 @@
+classes= 1
+train  = train.txt
+valid  = test.txt
+#valid = data/coco_val_5k.list
+names = ./Anonymize/DarknetLPcfg/classes.names
+backup = backup/
+
