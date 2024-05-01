@@ -1,1 +1,1 @@
-# object-detection-and-annonymization
+# object-detection-and-anonymization
